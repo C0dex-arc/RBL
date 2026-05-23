@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodlove: Kisah Dapur Azka</title>
+    <meta name="description" content="Visual novel game edukatif tentang bisnis kuliner digital. Bantu Azka merintis usaha online di platform Foodlove!">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<div id="game-container">
+    <img id="bg-main" src="images/backgrounds/IMG_3104.JPG" alt="Background">
+    <img id="cart" src="images/backgrounds/Illustration117.png" alt="Gerobak">
+    
+    <img id="character" src="" alt="Karakter" class="hidden">
+
+    <!-- UI Bar Uang / Skor (kanan atas) -->
+    <div id="ui-money">
+        <img src="images/ui/Bar uang.png" alt="Bar Uang">
+        <span id="money-text">Rp 0</span>
+        <span id="score-text">Skor: 0</span>
+    </div>
+
+    <!-- UI Ikon HP (kiri atas) -->
+    <div id="ui-hp-icon" onclick="openPhone()">
+        <img src="images/ui/Hp.png" alt="HP Azka">
+        <div id="hp-notif" >!</div>
+    </div>
+
+    <!-- Layar HP (Pop-up) -->
+    <div id="phone-screen" class="hidden">
+        <div class="app-header">Foodlove 🩷</div>
+        <div id="app-content">
+            <p id="app-text">Tidak ada pesanan masuk.</p>
+            <button id="btn-action" class="hidden" onclick="processOrder()">Terima Pesanan</button>
+        </div>
+        <button class="close-btn" onclick="closePhone()">Tutup HP</button>
+    </div>
+
+    <!-- Layar Interaksi (Dapur / Kembalian / Summary) -->
+    <div id="interaction-screen" class="hidden">
+        <div class="interaction-header">
+            <h2 id="interaction-title">Siapkan Pesanan</h2>
+        </div>
+        <div id="interaction-content">
+        </div>
+    </div>
+
+    <!-- Overlay gelap saat popup aktif -->
+    <div id="overlay" class="hidden" onclick="closeOverlayScreens()"></div>
+
+    <!-- Dialog Box (pojok kiri bawah) -->
+    <div id="dialogue-box" onclick="nextDialogue()">
+        <div id="speaker-name">Azka</div>
+        <div id="dialogue-text">Teks dialog akan muncul di sini...</div>
+        <div id="dialogue-hint">Klik untuk lanjut ➔</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
