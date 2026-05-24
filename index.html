@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodlove: Kisah Dapur Azka</title>
     <meta name="description" content="Visual novel game edukatif tentang bisnis kuliner digital. Bantu Azka merintis usaha online di platform Foodlove!">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -25,7 +27,7 @@
     <!-- UI Ikon HP (kiri atas) -->
     <div id="ui-hp-icon" onclick="openPhone()">
         <img src="images/ui/Hp.png" alt="HP Azka">
-        <div id="hp-notif" >!</div>
+        <div id="hp-notif" class="hidden">!</div>
     </div>
 
     <!-- Layar HP (Pop-up) -->
@@ -52,6 +54,7 @@
 
     <!-- Dialog Box (pojok kiri bawah) -->
     <div id="dialogue-box" onclick="nextDialogue()">
+        <img id="metallicat-aside" src="images/characters/metallicat.jpeg" alt="Metallicat" class="hidden">
         <div id="speaker-name">Azka</div>
         <div id="dialogue-text">Teks dialog akan muncul di sini...</div>
         <div id="dialogue-hint">Klik untuk lanjut ➔</div>
