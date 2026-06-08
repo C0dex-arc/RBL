@@ -32,12 +32,37 @@
 
     <!-- Layar HP (Pop-up) -->
     <div id="phone-screen" class="hidden">
-        <div class="app-header">Foodlove 🩷</div>
+        <div class="phone-status-bar">
+            <span class="phone-time" id="phone-time">18:49</span>
+            <div class="phone-status-icons">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+            </div>
+        </div>
+        <div class="app-header">
+            <div class="app-header-brand">
+                <div class="app-logo-icon"></div>
+                <span>Foodlove</span>
+            </div>
+        </div>
         <div id="app-content">
             <p id="app-text">Tidak ada pesanan masuk.</p>
-            <button id="btn-action" class="hidden" onclick="processOrder()">Terima Pesanan</button>
+            <button id="btn-action" class="hidden">Terima Pesanan</button>
         </div>
-        <button class="close-btn" onclick="closePhone()">Tutup HP</button>
+        <div class="phone-bottom-bar">
+            <button class="phone-nav-btn" onclick="closePhone()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                <span>Beranda</span>
+            </button>
+            <button class="phone-nav-btn active">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                <span>Pesanan</span>
+            </button>
+            <button class="phone-nav-btn" onclick="closePhone()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                <span>Tutup</span>
+            </button>
+        </div>
     </div>
 
     <!-- Layar Interaksi (Dapur / Kembalian / Summary) -->
@@ -58,6 +83,11 @@
         <div id="speaker-name">Azka</div>
         <div id="dialogue-text">Teks dialog akan muncul di sini...</div>
         <div id="dialogue-hint">Klik untuk lanjut ➔</div>
+    </div>
+
+    <!-- Transisi Gelap antar Hari -->
+    <div id="day-transition" class="day-transition">
+        <div class="day-transition-text" id="day-transition-text"></div>
     </div>
 </div>
 
